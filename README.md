@@ -19,7 +19,7 @@
     - **Propósito**: Los servicios se sitúan en el núcleo de la lógica de negocio. Este archivo se encarga de implementar las reglas de negocio, procesar la lógica interna, y manipular los datos antes de que sean devueltos al controlador. En la Arquitectura Limpia, los servicios deberían ser independientes de las interfaces externas como los controladores o bases de datos, permitiendo que la lógica de negocio se mantenga aislada y fácil de probar.
     - **Ejemplo Real**: En la aplicación de vuelos, `app.service.ts` podría tener un método `obtenerVuelosDisponibles()` que consulta la base de datos para obtener todos los vuelos que aún tienen asientos disponibles y cumplen con los criterios de búsqueda del usuario.
 
-- **main.ts**: 
+- **main.ts o index.ts**: 
     - **Descripción**: El punto de entrada de la aplicación.
     - **Rol en la Arquitectura Limpia**: **Capa de Configuración**
     - **Propósito**: Aquí es donde se configura y arranca el servidor de la aplicación. En términos de Arquitectura Limpia, `main.ts` configura las capas externas, como la red (HTTP), y orquesta la inicialización de la aplicación sin involucrarse en la lógica de negocio. Es el archivo que conecta todos los componentes antes de que la aplicación comience a procesar solicitudes.
